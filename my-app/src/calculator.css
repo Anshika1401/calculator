@@ -1,0 +1,99 @@
+/* src/Calculator.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+.calculator {
+    width: 360px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3); /* Light shadow for contrast */
+    transition: transform 0.2s;
+}
+
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+.display {
+    background: linear-gradient(135deg, #1c1c1c, #2e2e2e); 
+    padding: 20px;
+    font-size: 2.5em;
+    text-align: right;
+    border-bottom: 4px solid red; 
+    min-height: 80px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.input {
+    font-size: 0.5em;
+    color: white;
+}
+
+.result {
+    font-weight: bold;
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    background: #666; /* Grey background for buttons */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #777; /* Slightly lighter grey on hover */
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+button:nth-child(4n) {
+    background: #28a745; /* Green background for operator buttons */
+}
+
+button:nth-child(4n):hover {
+    background: #218838; /* Darker green on hover */
+}
+
+button:last-child {
+    background: #dc3545; /* Red background for the clear button */
+}
+
+button:last-child:hover {
+    background: #c82333; /* Darker red on hover */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
